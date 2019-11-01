@@ -1,22 +1,50 @@
-.App {
+.navigation {
   text-align: center;
+  padding: 20px 0;
+}
+
+.link {
+  margin: 20px;
+  text-decoration: none;
 }
 
 .header {
+  text-align: center;
+  padding-top: 20px;
+  background: mediumvioletred;
+}
+
+.inputFields {
   display: flex;
   justify-content: space-evenly;
 }
 
-.header input,
-.header select {
+.inputFields input,
+.inputFields select {
   width: 20%;
+  padding: 5px 0;
 }
 
 .toevoegenBtn {
   width: 90%;
+  padding: 5px 0;
+  border-radius: 5px;
+  background: limegreen;
 }
 
 .headRow {
   display: flex;
   justify-content: space-around;
+  background: mediumorchid;
+}
+
+.newRow {
+  display: flex;
+  justify-content: space-around;
+  background: midnightblue;
+  color: white;
+}
+
+.aboutUs {
+  margin: 0 50px;
 }

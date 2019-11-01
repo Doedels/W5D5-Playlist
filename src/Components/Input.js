@@ -1,9 +1,10 @@
 import React from 'react';
+import '../App.css';
 
 const input = (props) => {
     return (
-        <div>
-            <div className={'header'}>
+        <div className={'header'} >
+            <div className={'inputFields'}>
                 <input type='text' name='titel' defaultValue='titel' onChange={props.inputHandler} ></input>
                 <input type='text' name='artiest' defaultValue='artiest' onChange={props.inputHandler} ></input>
                 <select name='genre' onChange={props.inputHandler}>

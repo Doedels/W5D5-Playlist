@@ -2,7 +2,7 @@ import React from 'react';
 
 const row = (props) => {
     return (
-        <div className='headRow' >
+        <div className='newRow' >
             <p>{props.titel}</p>
             <p>{props.artiest}</p>
             <p>{props.genre}</p>
