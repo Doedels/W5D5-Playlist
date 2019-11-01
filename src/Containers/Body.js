@@ -28,8 +28,7 @@ class Body extends Component {
         return (
             <div>
                 <Input inputHandler={this.inputHandler} addSongHandler={this.addSongHandler} />
-                <Main />
-                <h1>{this.state.allRows.map(row => `${row.titel} ${row.artiest} ${row.genre} ${row.rating}`)}</h1>
+                <Main allRows={this.state.allRows} />
 
             </div>
         )
