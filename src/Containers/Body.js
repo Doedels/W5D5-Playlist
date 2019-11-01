@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from '../Components/Input';
+import Main from '../Components/Main';
 
 class Body extends Component {
     state = {
@@ -27,6 +28,7 @@ class Body extends Component {
         return (
             <div>
                 <Input inputHandler={this.inputHandler} addSongHandler={this.addSongHandler} />
+                <Main />
                 <h1>{this.state.allRows.map(row => `${row.titel} ${row.artiest} ${row.genre} ${row.rating}`)}</h1>
 
             </div>

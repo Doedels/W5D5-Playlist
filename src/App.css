@@ -15,3 +15,8 @@
 .toevoegenBtn {
   width: 90%;
 }
+
+.headRow {
+  display: flex;
+  justify-content: space-around;
+}
