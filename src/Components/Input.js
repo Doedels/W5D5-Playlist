@@ -2,7 +2,7 @@ import React from 'react';
 
 const input = (props) => {
     return (
-        <div>
+        <div className={'header'}>
             <input type='text' name='titel' defaultValue='titel' onChange={props.inputHandler} ></input>
             <input type='text' name='artiest' defaultValue='artiest' onChange={props.inputHandler} ></input>
             <select name='genre' onChange={props.inputHandler}>
