@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from '../Components/Input';
 import Main from '../Components/Main';
+import axios from 'axios';
 
 class Body extends Component {
     state = {
@@ -22,6 +23,7 @@ class Body extends Component {
     addSongHandler = () => {
         const allRowsCopy = this.state.allRows.concat(this.state.row);
         this.setState({ allRows: allRowsCopy })
+        axios.put('https://burger-builder-c15f4.firebaseio.com/playlist.json', allRowsCopy)
     }
 
     render() {
