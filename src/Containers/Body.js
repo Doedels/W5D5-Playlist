@@ -14,6 +14,11 @@ class Body extends Component {
         allRows: []
     }
 
+    componentDidMount() {
+        axios.get('https://burger-builder-c15f4.firebaseio.com/playlist.json')
+            .then(response => this.setState({ allRows: response.data }))
+    }
+
     inputHandler = (event) => {
         const rowCopy = { ...this.state.row };
         rowCopy[event.target.name] = event.target.value
@@ -23,7 +28,7 @@ class Body extends Component {
     addSongHandler = () => {
         const allRowsCopy = this.state.allRows.concat(this.state.row);
         this.setState({ allRows: allRowsCopy })
-        axios.put('https://burger-builder-c15f4.firebaseio.com/playlist.json', allRowsCopy)
+        axios.put('https://burger-builder-c15f4.firebaseio.com/playlist.json', allRowsCopy);
     }
 
     render() {
