@@ -3,24 +3,32 @@ import Input from '../Components/Input';
 
 class Body extends Component {
     state = {
-        titel: null,
-        artiest: null,
-        genre: null,
-        rating: null
+        row: {
+            titel: null,
+            artiest: null,
+            genre: null,
+            rating: null
+        },
+        allRows: []
     }
 
     inputHandler = (event) => {
-        this.setState({ [event.target.name]: event.target.value });
+        const rowCopy = { ...this.state.row };
+        rowCopy[event.target.name] = event.target.value
+        this.setState({ row: rowCopy });
+    }
+
+    addSongHandler = () => {
+        const allRowsCopy = this.state.allRows.concat(this.state.row);
+        this.setState({ allRows: allRowsCopy })
     }
 
     render() {
         return (
             <div>
-                <Input inputHandler={this.inputHandler} />
-                <h1>{this.state.titel}</h1>
-                <h1>{this.state.artiest}</h1>
-                <h1>{this.state.genre}</h1>
-                <h1>{this.state.rating}</h1>
+                <Input inputHandler={this.inputHandler} addSongHandler={this.addSongHandler} />
+                <h1>{this.state.allRows.map(row => `${row.titel} ${row.artiest} ${row.genre} ${row.rating}`)}</h1>
+
             </div>
         )
     }
